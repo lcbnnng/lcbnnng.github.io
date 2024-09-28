@@ -1,1 +1,82 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luca Bünning | Web development</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="navbar">
+            <nav class="nav-links">
+                <a href="#welcome-section" class="section-link"><div class="link-box">Welcome</div></a>
+                <a href="#projects" class="section-link"><div class="link-box">Projects</div></a>
+                <a href="#contact" class="section-link"><div class="link-box">Contact</div></a>
+            </nav>
+        </div>
+        <div id="page-wrapper">
+            <section id="welcome-section">
+                <h1 id="greeting">Hey! I am Luca</h1>
+                <h2 id="introduction" class="section-headline">...a beginning web developer</h2>
+            </section>
+            <section id="projects">
+                <div class="projects-wrapper">
+                    <h2 id="projects-headline" class="section-headline">These are some of my web development projects</h2>
+                    <div id="project-cards">
+                            <div class="project js-documentation card">
+                                <a href="http://localhost:5501/01-responsive-web-design/14-technical-documentation/index.html" class="project-link" target="_blank">
+                                    <img src="JS_documentation.png" alt="Screenshot of a JavaScript Documentation practice project">
+                                    <div class="project-title">JS Documentation</div>
+                                </a>
+                            </div>
+                            <div class="project tribute-page card">
+                                <a href="http://localhost:5501/01-responsive-web-design/10-tribute-page/index.html" class="project-link" target="_blank">
+                                    <img src="toni_kroos_tribute.png" alt="Screenshot of a tribute page practice project">
+                                    <div class="project-title">Tribute Page</div>
+                                </a>
+                            </div>
+                        <div class="project magazine-page card">
+                            <a href="http://localhost:5501/01-responsive-web-design/16-build-a-magazine/index.html" class="project-link" target="_blank">
+                                <img src="magazine-page.png" alt="Screenshot of a magazine page practice project">
+                                <div class="project-title">Magazine Page</div>
+                            </a>
+                        </div>
+                        <div class="project product-page card project-tile">
+                            <a href="http://localhost:5501/01-responsive-web-design/17-product-page/index.html" class="project-link" target="_blank">
+                                <img src="product_page.png" alt="Screenshot of a product page practice project">
+                                <div class="project-title">Product Page "The Spot"</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <section id="contact">
+                <div class="contact-wrapper">
+                    <h1 class="contact-headline">Want to contact me?</h1>
+                    <h2 class="section-headline">here's how</h2>
+                    <div class="contact-links">
+                        <a href="mailto:lcbnnng@gmail.com">
+                            <i class="fas fa-at"></i>
+                            <p class="contact-label">E-Mail</p>
+                        </a>
+                        <a href="tel:+491749985999">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p class="contact-label">Phone</p>
+                        </a>
+                        <a href="https://github.com/lcbnnng" id="profile-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <p class="contact-label">GitHub</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <p class="copyright">© Luca Bünning 2024</p>
+            </footer>
+        </div>
+    </body>
+</html>

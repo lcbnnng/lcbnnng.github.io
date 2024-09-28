@@ -1,0 +1,376 @@
+:root {
+    --accent-color1: rgb(253, 128, 82);
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Includes padding and borders in element's total width and height */
+    scroll-behavior: smooth;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#navbar {
+    position: fixed;
+    height: 5em;
+    width: 100%;
+    top: 0;
+    background-color: var(--accent-color1);
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 200;
+    padding: 0 1em; /* Added padding for spacing on smaller screens */
+}
+
+.nav-links {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.link-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-link {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em; /* Adjusted padding for flexibility */
+    position: relative;
+    color: beige;
+}
+
+.section-link:hover {
+    background-color: rgb(231, 117, 75);
+    transition: background-color 0.3s ease;
+}
+
+.section-link::after {
+    content: "";
+    width: 0%;
+    background-color: #383838;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    transition: width 0.4s ease;
+}
+
+.section-link:hover::after {
+    width: 80%;
+}
+
+#welcome-section {
+    background-image: linear-gradient(45deg, #383838 0%, #2e2e2e);
+    width: 100%;
+    height: 100vh;
+    padding-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: azure;
+    text-align: center; /* Center align text on smaller screens */
+    padding: 2em 1em; /* Added padding for better spacing on small devices */
+}
+
+#greeting {
+    font-size: 5em;
+    transition: transform 0.3s ease;
+}
+
+#greeting:hover {
+    transform: scale(1.05);
+}
+
+#introduction {
+    color: var(--accent-color1);
+    font-size: 1.5em; /* Adjusted font size */
+    margin-top: 0.5em;
+}
+
+.section-headline {
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 200;
+    margin-bottom: 3em;
+}
+
+#projects {
+    background-image: linear-gradient(45deg, #c7dff1 0%, #a4bacc 45%);
+    width: 100%;
+    padding: 5em 1em; /* Adjusted padding for smaller screens */
+}
+
+.projects-wrapper {
+    width: 65%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#projects-headline {
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #0F0400;
+    font-size: 2em;
+}
+
+#project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 30%;
+    max-width: 500px;
+    height: 400px;
+    margin: 1em;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures child elements don't overflow the card */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+#project-cards .card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-title {
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.95;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.project-title::before {
+    content: "<\00a0";
+    color: var(--accent-color1);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.project-title::after {
+    content: "\00a0/>";
+    color: var(--accent-color1);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.card:hover .project-title::before,
+.card:hover .project-title::after {
+    opacity: 1;
+}
+
+.contact-wrapper {
+    background-image: linear-gradient(45deg, #383838 0%, #2e2e2e);
+    width: 100%;
+    min-height: calc(100vh - 5em);
+    padding: 5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: azure;
+    text-align: center; /* Center align text on smaller screens */
+}
+
+.contact-headline {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+.contact-links {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: azure;
+    margin-left: 3em;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-links a:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.contact-links a i {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    font-size: 1em;
+    border-top: 3px solid var(--accent-color1);
+    background: linear-gradient(#383838 0%, #2e2e2e);
+    color: azure;
+    padding: 0 1em;
+}
+
+/* Media Queries */
+
+/* Tablets (width between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .nav-links {
+        font-size: 1.2em;
+        flex-direction: row; /* Maintain horizontal layout */
+    }
+
+    .card {
+        width: 45%;
+        max-width: 45%;
+        height: 220px; /* Adjust height for smaller screens */
+    }
+
+    #greeting {
+        font-size: 3.5em;
+    }
+
+    #introduction {
+        font-size: 1.3em;
+    }
+
+    .section-headline {
+        font-size: 1.8em;
+    }
+
+    .contact-headline {
+        font-size: 3em;
+    }
+
+    .contact-links a {
+        font-size: 1.3em;
+    }
+
+    .contact-links a i {
+        font-size: 1em;
+    }
+}
+
+/* Mobile Devices (width below 768px) */
+@media (max-width: 768px) {
+    #navbar {
+        justify-content: center;
+        flex-direction: column; /* Stack nav links vertically */
+        height: auto; /* Adjust height to content */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background-color: var(--accent-color1);
+        width: 100%;
+        display: none; /* Hide navigation links by default */
+    }
+
+    /* Display navigation links when parent is hovered */
+    #navbar:hover .nav-links {
+        display: flex;
+    }
+
+    .section-link {
+        padding: 1em 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .projects-wrapper {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 90%;
+        height: auto; /* Let height adjust based on content */
+    }
+
+    #greeting {
+        font-size: 2.5em;
+    }
+
+    #introduction {
+        font-size: 1.2em;
+    }
+
+    .section-headline {
+        font-size: 1.5em;
+    }
+
+    .contact-headline {
+        font-size: 2.5em;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-links a {
+        margin: 0.5em 0;
+        font-size: 1.2em;
+    }
+
+    #welcome-section, .contact-wrapper, #projects {
+        padding: 3em 1em; /* Adjust padding for smaller screens */
+    }
+}
