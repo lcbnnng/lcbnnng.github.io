@@ -243,6 +243,11 @@ body, html {
     font-size: 30px;
     display: flex;
     align-items: center;
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color1);
 }
 
 .contact-links a:nth-of-type(1) {
